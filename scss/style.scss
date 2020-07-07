@@ -1,0 +1,88 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 30px;
+  right: 0;
+  z-index: 5;
+
+  &__inner {
+    min-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @extend %ubuntu-medium;
+    font-size: 15px;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    margin-right: 9px;
+    padding: 6px 28px;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: transparent;
+  }
+
+  &__phone {
+    @extend %ubuntu-bold;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.menu {
+
+  &__list--item {
+    display: inline-block;
+
+    &+.menu__list--item {
+      padding-left: 20px;
+    }
+  }
+}
+
+.top {
+  background: url('./../images/top-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    @extend %sf-semibold;
+    font-size: 96px;
+    line-height: 115px;
+  }
+
+  &__text {
+    margin: 25px 0 35px;
+    min-width: 325px;
+  }
+
+  &__social--item {
+    margin: 0 25px;
+    display: inline-block;
+  }
+}
+
+
+
+
+
+
+@import "media";
